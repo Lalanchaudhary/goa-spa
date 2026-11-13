@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GOA SPA CENTER | Special 12% OFF</title>
+
+  <meta name="description" content="Welcome to Goa Spa Center. Enjoy 12% OFF on your first booking. Contact us on WhatsApp.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --dark: #102923;
+      --dark2: #1d4438;
+      --cream: #f7f4eb;
+      --gold: #f6cc72;
+      --green: #20c768;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      min-height: 82px;
+      padding: 15px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--cream);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #bd9856;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-btn {
+      background: var(--dark);
+      color: white !important;
+      padding: 13px 24px;
+      border-radius: 30px;
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+      min-height: 650px;
+      padding: 80px 6%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      background:
+        radial-gradient(circle at center, #285344 0%, #173a30 45%, #102923 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(246,204,114,.15);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 500px;
+      height: 500px;
+      top: -280px;
+      left: -150px;
+    }
+
+    .hero::after {
+      width: 600px;
+      height: 600px;
+      bottom: -420px;
+      right: -150px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--gold);
+      border: 1px solid rgba(246,204,114,.6);
+      padding: 11px 23px;
+      border-radius: 30px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(45px, 8vw, 85px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    /* DISCOUNT */
+
+    .offer {
+      margin: 35px 0 40px;
+      color: var(--gold);
+      font-size: clamp(65px, 11vw, 115px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -3px;
+      text-shadow: 0 5px 35px rgba(246,204,114,.3);
+    }
+
+    .offer small {
+      display: block;
+      color: white;
+      font-size: clamp(13px, 2vw, 18px);
+      font-weight: 700;
+      letter-spacing: 5px;
+      margin-top: 20px;
+    }
+
+    .offer-label {
+      display: inline-block;
+      color: var(--dark);
+      background: var(--gold);
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    /* WHATSAPP BUTTON */
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      padding: 20px 40px;
+      background: var(--green);
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 800;
+      box-shadow: 0 12px 30px rgba(32,199,104,.25);
+      transition: .3s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #16a957;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(32,199,104,.35);
+    }
+
+    .whatsapp-btn svg {
+      width: 25px;
+      height: 25px;
+      fill: white;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 90px 8%;
+      text-align: center;
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #ad8950;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .intro h2,
+    .services h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 22px;
+    }
+
+    .intro p {
+      line-height: 1.9;
+      color: #68746e;
+      font-size: 16px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      padding: 85px 8%;
+      background: #eaece3;
+      text-align: center;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      text-align: left;
+      transition: .3s;
+      box-shadow: 0 5px 20px rgba(0,0,0,.04);
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.1);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-info {
+      padding: 25px;
+    }
+
+    .service-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .service-info p {
+      color: #778079;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* BOOKING CTA */
+
+    .booking {
+      padding: 90px 20px;
+      text-align: center;
+      color: white;
+      background: var(--dark);
+    }
+
+    .booking h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 6vw, 58px);
+      margin-bottom: 20px;
+    }
+
+    .booking .discount {
+      color: var(--gold);
+    }
+
+    .booking p {
+      color: #cbd7d0;
+      margin-bottom: 35px;
+      line-height: 1.8;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      padding: 80px 8%;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #68746e;
+      line-height: 1.8;
+    }
+
+    .phone {
+      font-size: 25px;
+      font-weight: 800;
+      margin: 25px 0;
+    }
+
+    .phone a {
+      color: var(--dark);
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #10231f;
+      padding: 28px 15px;
+      text-align: center;
+      color: #d4ddd6;
+      font-size: 13px;
+    }
+
+    /* FLOATING WHATSAPP */
+
+    .floating-wa {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 99;
+      width: 62px;
+      height: 62px;
+      background: #20c768;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 5px 20px #0003;
+      transition: .3s;
+    }
+
+    .floating-wa:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-wa svg {
+      width: 34px;
+      height: 34px;
+      fill: white;
+    }
+
+    /* MOBILE RESPONSIVE */
+
+    @media(max-width: 768px) {
+
+      .navbar {
+        min-height: 70px;
+        padding: 12px 5%;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      .nav-links {
+        gap: 10px;
+      }
+
+      .nav-links a:first-child {
+        display: none;
+      }
+
+      .nav-btn {
+        padding: 11px 17px;
+        font-size: 12px !important;
+      }
+
+      .hero {
+        min-height: 590px;
+        padding: 65px 5%;
+      }
+
+      .tag {
+        font-size: 10px;
+        letter-spacing: 2px;
+        padding: 10px 15px;
+      }
+
+      .hero h1 {
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+      }
+
+      .offer {
+        margin: 35px 0;
+      }
+
+      .offer small {
+        letter-spacing: 3px;
+      }
+
+      .whatsapp-btn {
+        width: 100%;
+        padding: 19px 12px;
+        font-size: 15px;
+      }
+
+      .intro {
+        padding: 65px 6%;
+      }
+
+      .services {
+        padding: 65px 6%;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .service-card img {
+        height: 240px;
+      }
+
+      .booking {
+        padding: 75px 6%;
+      }
+
+      .contact {
+        padding: 65px 6%;
+      }
+
+      .floating-wa {
+        width: 55px;
+        height: 55px;
+        bottom: 18px;
+        right: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <div class="logo">
+      GOA <span>SPA</span> CENTER
+    </div>
+
+    <nav class="nav-links">
+      <a href="#services">OUR SERVICES</a>
+      <a href="#contact" class="nav-btn">CONTACT US</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="tag">
+        RELAX • REJUVENATE • REFRESH
+      </div>
+
+      <h1>
+        GOA SPA CENTER
+      </h1>
+
+      <div class="offer-label">
+        SPECIAL FIRST BOOKING OFFER
+      </div>
+
+      <div class="offer">
+        12% OFF
+
+        <small>
+          ON YOUR FIRST BOOKING
+        </small>
+      </div>
+
+      <a class="whatsapp-btn"
+         href="https://wa.me/918893713227?text=I%20WANT%20TO%20KNOW%20MORE.."
+         target="_blank"
+         rel="noopener">
+
+        <svg viewBox="0 0 32 32">
+          <path d="M16 .5A15.5 15.5 0 0 0 2.6 23.8L.5 31.5l7.9-2.1A15.5 15.5 0 1 0 16 .5zm0 28.2c-2.5 0-4.9-.7-7-2l-.5-.3-4.7 1.2L5 23l-.3-.5A12.7 12.7 0 1 1 16 28.7zm7-9.5c-.4-.2-2.3-1.1-2.7-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7s-.9-2.1-1.3-2.9c-.3-.7-.7-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 3.9c.2.3 2.8 4.3 6.8 6 .9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.7-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5z"/>
+        </svg>
+
+        BOOK NOW ON WHATSAPP
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT SECTION -->
+
+  <section class="intro">
+
+    <div class="section-label">
+      WELCOME TO GOA SPA CENTER
+    </div>
+
+    <h2>
+      Your Relaxation Starts Here
+    </h2>
+
+    <p>
+      Take a break from your busy routine and enjoy a peaceful
+      wellness experience. At Goa Spa Center, our goal is to help
+      you relax, refresh and feel rejuvenated.
+      Contact us today to know more about our services and bookings.
+    </p>
+
+  </section>
+
+
+  <!-- SERVICES SECTION -->
+
+  <section class="services" id="services">
+
+    <div class="section-label">
+      WHAT WE OFFER
+    </div>
+
+    <h2>
+      Our Services
+    </h2>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800"
+          alt="Relaxation massage">
+
+        <div class="service-info">
+          <h3>Relaxation Massage</h3>
+
+          <p>
+            Enjoy a calming experience designed to help
+            you unwind and relax.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800"
+          alt="Spa therapy">
+
+        <div class="service-info">
+          <h3>Spa Therapy</h3>
+
+          <p>
+            Take time for yourself with a refreshing
+            wellness experience.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800"
+          alt="Wellness care">
+
+        <div class="service-info">
+          <h3>Wellness Care</h3>
+
+          <p>
+            Discover a peaceful space dedicated to
+            comfort and relaxation.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BOOKING SECTION -->
+
+  <section class="booking">
+
+    <div class="section-label">
+      LIMITED TIME SPECIAL OFFER
+    </div>
+
+    <h2>
+      Get <span class="discount">12% OFF</span>
+    </h2>
+
+    <p>
+      Enjoy a special discount on your first booking.
+      <br>
+      Contact us on WhatsApp and make your booking today.
+    </p>
+
+    <a class="whatsapp-btn"
+       href="https://wa.me/918893713227?text=I%20WANT%20TO%20KNOW%20MORE.."
+       target="_blank"
+       rel="noopener">
+
+      BOOK YOUR FIRST SESSION
+
+    </a>
+
+  </section>
+
+
+  <!-- CONTACT SECTION -->
+
+  <section class="contact" id="contact">
+
+    <div class="section-label">
+      GET IN TOUCH
+    </div>
+
+    <h2>
+      Contact Us
+    </h2>
+
+    <p>
+      Have questions or want to make a booking?
+      Chat with us today.
+    </p>
+
+    <div class="phone">
+      <a href="tel:+918893713227">
+        +91 88937 13227
+      </a>
+    </div>
+
+    <a class="whatsapp-btn"
+       href="https://wa.me/918893713227?text=I%20WANT%20TO%20KNOW%20MORE.."
+       target="_blank"
+       rel="noopener">
+
+      CHAT WITH US ON WHATSAPP
+
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 Goa Spa Center. All Rights Reserved.
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+
+  <a class="floating-wa"
+     href="https://wa.me/918893713227?text=I%20WANT%20TO%20KNOW%20MORE.."
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat with us on WhatsApp">
+
+    <svg viewBox="0 0 32 32">
+      <path d="M16 .5A15.5 15.5 0 0 0 2.6 23.8L.5 31.5l7.9-2.1A15.5 15.5 0 1 0 16 .5zm0 28.2c-2.5 0-4.9-.7-7-2l-.5-.3-4.7 1.2L5 23l-.3-.5A12.7 12.7 0 1 1 16 28.7zm7-9.5c-.4-.2-2.3-1.1-2.7-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7s-.9-2.1-1.3-2.9c-.3-.7-.7-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 3.9c.2.3 2.8 4.3 6.8 6 .9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.7-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5z"/>
+    </svg>
+
+  </a>
+
+</body>
+</html>
