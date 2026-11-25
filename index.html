@@ -2,479 +2,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>GOA SPA CENTER | Special 12% OFF</title>
+<title>AMBANI STUDIO | 12% OFF</title>
 
-  <meta name="description" content="Welcome to Goa Spa Center. Enjoy 12% OFF on your first booking. Contact us on WhatsApp.">
+<meta name="description" content="Welcome to AMBANI STUDIO. Book your first session and get 12% OFF.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<style>
+
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #050505;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+:root {
+    --red: #e50920;
+    --gold: #e6bd78;
+    --black: #050505;
+    --white: #ffffff;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808;
+    border-bottom: 1px solid #222;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-btn {
+    text-decoration: none;
+    background: var(--red);
+    color: white;
+    padding: 13px 23px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.nav-btn:hover {
+    background: var(--gold);
+    color: black;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 650px;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+    radial-gradient(ellipse at center, #271014 0%, #10090b 48%, #050505 100%);
+}
+
+/* Subtle patterns */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(229,9,32,.13);
+    border-radius: 50%;
+    box-shadow:
+    0 0 80px rgba(229,9,32,.12),
+    inset 0 0 80px rgba(229,9,32,.08);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .12;
+    pointer-events: none;
+
+    background-image: radial-gradient(#e6bd78 1px, transparent 1px);
+    background-size: 35px 35px;
+
+    mask-image: linear-gradient(to bottom, transparent, black, transparent);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    animation: fadeUp 1.2s ease;
+}
+
+/* STUDIO TEXT */
+
+.studio-tag {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 7px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(75px, 14vw, 155px);
+    font-weight: 900;
+    letter-spacing: 10px;
+    line-height: 1;
+
+    background: linear-gradient(
+        180deg,
+        #ffffff 10%,
+        #d7d7d7 45%,
+        #8c8c8c 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(0 8px 20px rgba(229,9,32,.2));
+}
+
+.studio-name {
+    font-size: 15px;
+    color: var(--gold);
+    letter-spacing: 12px;
+    font-weight: 700;
+    margin-top: 18px;
+    margin-left: 10px;
+}
+
+/* DIVIDER */
+
+.divider {
+    width: 150px;
+    height: 2px;
+    margin: 30px auto;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--red),
+        var(--gold),
+        transparent
+    );
+}
+
+/* DISCOUNT */
+
+.hero h2 {
+    font-size: clamp(65px, 11vw, 115px);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--red);
+    text-shadow: 0 0 35px rgba(229,9,32,.3);
+    margin-top: 15px;
+}
+
+.hero h2 span {
+    color: var(--gold);
+}
+
+.offer-text {
+    font-size: 13px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    color: #ddd;
+    margin-top: 20px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+
+    margin-top: 40px;
+    padding: 17px 45px;
+
+    background: linear-gradient(135deg,#25d366,#078d42);
+    color: white;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    border: 1px solid #8cffb1;
+    border-radius: 50px;
+
+    box-shadow: 0 0 30px rgba(37,211,102,.25);
+    transition: .35s;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 0 45px rgba(37,211,102,.5);
+}
+
+.whatsapp-btn svg {
+    width: 23px;
+    height: 23px;
+    fill: white;
+}
+
+/* BOTTOM TEXT */
+
+.bottom-text {
+    margin-top: 35px;
+    font-size: 10px;
+    color: #888;
+    letter-spacing: 3px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #080808;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer-logo {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.footer-logo span {
+    color: var(--red);
+}
+
+.footer p {
+    color: #777;
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+/* FLOATING WHATSAPP */
+
+.float-whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 100;
+
+    background: #25d366;
+    color: white;
+
+    padding: 15px 22px;
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+
+    box-shadow: 0 5px 25px rgba(37,211,102,.3);
+    transition: .3s;
+}
+
+.float-whatsapp:hover {
+    transform: scale(1.08);
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
     }
 
-    :root {
-      --dark: #102923;
-      --dark2: #1d4438;
-      --cream: #f7f4eb;
-      --gold: #f6cc72;
-      --green: #20c768;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+/* RESPONSIVE */
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--dark);
-    }
-
-    /* NAVBAR */
+@media(max-width:768px) {
 
     .navbar {
-      min-height: 82px;
-      padding: 15px 8%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--cream);
+        height: 70px;
+        padding: 0 5%;
     }
 
     .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 25px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #bd9856;
+        font-size: 20px;
     }
 
     .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--dark);
-      font-size: 14px;
-      font-weight: 600;
+        display: none;
     }
 
     .nav-btn {
-      background: var(--dark);
-      color: white !important;
-      padding: 13px 24px;
-      border-radius: 30px;
+        padding: 11px 15px;
+        font-size: 10px;
     }
-
-    /* HERO SECTION */
 
     .hero {
-      min-height: 650px;
-      padding: 80px 6%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      background:
-        radial-gradient(circle at center, #285344 0%, #173a30 45%, #102923 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      border: 1px solid rgba(246,204,114,.15);
-      border-radius: 50%;
-      pointer-events: none;
+        min-height: 600px;
+        padding: 60px 15px;
     }
 
     .hero::before {
-      width: 500px;
-      height: 500px;
-      top: -280px;
-      left: -150px;
-    }
-
-    .hero::after {
-      width: 600px;
-      height: 600px;
-      bottom: -420px;
-      right: -150px;
-    }
-
-    .hero-content {
-      max-width: 850px;
-      width: 100%;
-      position: relative;
-      z-index: 2;
-    }
-
-    .tag {
-      display: inline-block;
-      color: var(--gold);
-      border: 1px solid rgba(246,204,114,.6);
-      padding: 11px 23px;
-      border-radius: 30px;
-      font-size: 12px;
-      letter-spacing: 3px;
-      font-weight: 600;
-      margin-bottom: 32px;
+        width: 300px;
+        height: 300px;
     }
 
     .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(45px, 8vw, 85px);
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
+        letter-spacing: 5px;
     }
 
-    /* DISCOUNT */
-
-    .offer {
-      margin: 35px 0 40px;
-      color: var(--gold);
-      font-size: clamp(65px, 11vw, 115px);
-      font-weight: 800;
-      line-height: 1;
-      letter-spacing: -3px;
-      text-shadow: 0 5px 35px rgba(246,204,114,.3);
+    .studio-tag {
+        font-size: 10px;
+        letter-spacing: 4px;
     }
 
-    .offer small {
-      display: block;
-      color: white;
-      font-size: clamp(13px, 2vw, 18px);
-      font-weight: 700;
-      letter-spacing: 5px;
-      margin-top: 20px;
+    .studio-name {
+        font-size: 12px;
+        letter-spacing: 8px;
     }
 
-    .offer-label {
-      display: inline-block;
-      color: var(--dark);
-      background: var(--gold);
-      padding: 9px 20px;
-      border-radius: 30px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin-bottom: 15px;
+    .offer-text {
+        font-size: 10px;
+        letter-spacing: 3px;
     }
-
-    /* WHATSAPP BUTTON */
 
     .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 13px;
-      padding: 20px 40px;
-      background: var(--green);
-      color: white;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 800;
-      box-shadow: 0 12px 30px rgba(32,199,104,.25);
-      transition: .3s;
+        padding: 15px 30px;
+        font-size: 13px;
     }
 
-    .whatsapp-btn:hover {
-      background: #16a957;
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(32,199,104,.35);
-    }
-
-    .whatsapp-btn svg {
-      width: 25px;
-      height: 25px;
-      fill: white;
-    }
-
-    /* INTRO */
-
-    .intro {
-      padding: 90px 8%;
-      text-align: center;
-      max-width: 1050px;
-      margin: auto;
-    }
-
-    .section-label {
-      color: #ad8950;
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    .intro h2,
-    .services h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(32px, 5vw, 48px);
-      margin-bottom: 22px;
-    }
-
-    .intro p {
-      line-height: 1.9;
-      color: #68746e;
-      font-size: 16px;
-    }
-
-    /* SERVICES */
-
-    .services {
-      padding: 85px 8%;
-      background: #eaece3;
-      text-align: center;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin-top: 45px;
-    }
-
-    .service-card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      text-align: left;
-      transition: .3s;
-      box-shadow: 0 5px 20px rgba(0,0,0,.04);
-    }
-
-    .service-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.1);
-    }
-
-    .service-card img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .service-info {
-      padding: 25px;
-    }
-
-    .service-info h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 23px;
-      margin-bottom: 12px;
-    }
-
-    .service-info p {
-      color: #778079;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    /* BOOKING CTA */
-
-    .booking {
-      padding: 90px 20px;
-      text-align: center;
-      color: white;
-      background: var(--dark);
-    }
-
-    .booking h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(38px, 6vw, 58px);
-      margin-bottom: 20px;
-    }
-
-    .booking .discount {
-      color: var(--gold);
-    }
-
-    .booking p {
-      color: #cbd7d0;
-      margin-bottom: 35px;
-      line-height: 1.8;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      padding: 80px 8%;
-      text-align: center;
-    }
-
-    .contact h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .contact p {
-      color: #68746e;
-      line-height: 1.8;
-    }
-
-    .phone {
-      font-size: 25px;
-      font-weight: 800;
-      margin: 25px 0;
-    }
-
-    .phone a {
-      color: var(--dark);
-      text-decoration: none;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #10231f;
-      padding: 28px 15px;
-      text-align: center;
-      color: #d4ddd6;
-      font-size: 13px;
-    }
-
-    /* FLOATING WHATSAPP */
-
-    .floating-wa {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      z-index: 99;
-      width: 62px;
-      height: 62px;
-      background: #20c768;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 5px 20px #0003;
-      transition: .3s;
-    }
-
-    .floating-wa:hover {
-      transform: scale(1.1);
-    }
-
-    .floating-wa svg {
-      width: 34px;
-      height: 34px;
-      fill: white;
-    }
-
-    /* MOBILE RESPONSIVE */
-
-    @media(max-width: 768px) {
-
-      .navbar {
-        min-height: 70px;
-        padding: 12px 5%;
-      }
-
-      .logo {
-        font-size: 21px;
-      }
-
-      .nav-links {
-        gap: 10px;
-      }
-
-      .nav-links a:first-child {
-        display: none;
-      }
-
-      .nav-btn {
-        padding: 11px 17px;
-        font-size: 12px !important;
-      }
-
-      .hero {
-        min-height: 590px;
-        padding: 65px 5%;
-      }
-
-      .tag {
-        font-size: 10px;
+    .bottom-text {
+        font-size: 9px;
         letter-spacing: 2px;
-        padding: 10px 15px;
-      }
-
-      .hero h1 {
-        letter-spacing: 1px;
-        margin-bottom: 25px;
-      }
-
-      .offer {
-        margin: 35px 0;
-      }
-
-      .offer small {
-        letter-spacing: 3px;
-      }
-
-      .whatsapp-btn {
-        width: 100%;
-        padding: 19px 12px;
-        font-size: 15px;
-      }
-
-      .intro {
-        padding: 65px 6%;
-      }
-
-      .services {
-        padding: 65px 6%;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
-
-      .service-card img {
-        height: 240px;
-      }
-
-      .booking {
-        padding: 75px 6%;
-      }
-
-      .contact {
-        padding: 65px 6%;
-      }
-
-      .floating-wa {
-        width: 55px;
-        height: 55px;
-        bottom: 18px;
-        right: 18px;
-      }
     }
-  </style>
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MJ8WG6L8"></script>
+
+    .float-whatsapp {
+        right: 15px;
+        bottom: 15px;
+        padding: 13px 17px;
+        font-size: 11px;
+    }
+}
+
+@media(max-width:380px) {
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero h2 {
+        font-size: 60px;
+    }
+}
+
+</style>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MX8GFQPS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -490,7 +435,7 @@ function gtag_report_conversion(url) {
     }
   };
   gtag('event', 'conversion', {
-      'send_to': 'AW-18573144867/vad-CJi76LcdEKPmrphF',
+      'send_to': 'AW-18593905754/iKLSCKfm4b4dENr4oaJF',
       'value': 1.0,
       'currency': 'INR',
       'event_callback': callback
@@ -503,244 +448,108 @@ function gtag_report_conversion(url) {
 
 <body>
 
-  <!-- NAVBAR -->
+<!-- NAVBAR -->
 
-  <header class="navbar">
+<nav class="navbar">
 
     <div class="logo">
-      GOA <span>SPA</span> CENTER
+        AMBANI<span>.</span> STUDIO
     </div>
 
-    <nav class="nav-links">
-      <a href="#services">OUR SERVICES</a>
-      <a href="#contact" class="nav-btn">CONTACT US</a>
-    </nav>
+    <ul class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#offer">OFFER</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
 
-  </header>
+    <a href="#contact" class="nav-btn">
+        BOOK NOW
+    </a>
+
+</nav>
 
 
-  <!-- HERO SECTION -->
+<!-- HERO SECTION -->
 
-  <section class="hero">
+<section class="hero" id="home">
 
     <div class="hero-content">
 
-      <h1>
-        GOA BOOK
-      </h1>
-
-      <div class="offer-label">
-        SPECIAL FIRST BOOKING OFFER
-      </div>
-
-      <div class="offer">
-        12% OFF
-
-        <small>
-          ON YOUR FIRST BOOKING
-        </small>
-      </div>
-
-      <a class="whatsapp-btn"
-         href="https://wa.me/918893713227?text=I%20WANT%20ID%20HERE.."
-         target="_blank"
-         rel="noopener"
-         onclick="return gtag_report_conversion(this.href)">
-         
-        <svg viewBox="0 0 32 32">
-          <path d="M16 .5A15.5 15.5 0 0 0 2.6 23.8L.5 31.5l7.9-2.1A15.5 15.5 0 1 0 16 .5zm0 28.2c-2.5 0-4.9-.7-7-2l-.5-.3-4.7 1.2L5 23l-.3-.5A12.7 12.7 0 1 1 16 28.7zm7-9.5c-.4-.2-2.3-1.1-2.7-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7s-.9-2.1-1.3-2.9c-.3-.7-.7-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 3.9c.2.3 2.8 4.3 6.8 6 .9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.7-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5z"/>
-        </svg>
-
-        BOOK NOW ON WHATSAPP
-
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT SECTION -->
-
-  <section class="intro">
-
-    <div class="section-label">
-      WELCOME TO GOA SPA CENTER
-    </div>
-
-    <h2>
-      Your Relaxation Starts Here
-    </h2>
-
-    <p>
-      Take a break from your busy routine and enjoy a peaceful
-      wellness experience. At Goa Spa Center, our goal is to help
-      you relax, refresh and feel rejuvenated.
-      Contact us today to know more about our services and bookings.
-    </p>
-
-  </section>
-
-
-  <!-- SERVICES SECTION -->
-
-  <section class="services" id="services">
-
-    <div class="section-label">
-      WHAT WE OFFER
-    </div>
-
-    <h2>
-      Our Services
-    </h2>
-
-    <div class="service-grid">
-
-      <div class="service-card">
-
-        <img
-          src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800"
-          alt="Relaxation massage">
-
-        <div class="service-info">
-          <h3>Relaxation Massage</h3>
-
-          <p>
-            Enjoy a calming experience designed to help
-            you unwind and relax.
-          </p>
+        <div class="studio-tag">
+            ✦ PREMIUM STUDIO ✦
         </div>
 
-      </div>
+        <h1>AMBANI</h1>
 
-
-      <div class="service-card">
-
-        <img
-          src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800"
-          alt="Spa therapy">
-
-        <div class="service-info">
-          <h3>Spa Therapy</h3>
-
-          <p>
-            Take time for yourself with a refreshing
-            wellness experience.
-          </p>
+        <div class="studio-name">
+            STUDIO
         </div>
 
-      </div>
+        <div class="divider"></div>
 
+        <h2 id="offer">
+            12% <span>OFF</span>
+        </h2>
 
-      <div class="service-card">
+        <p class="offer-text">
+            ON YOUR FIRST BOOKING
+        </p>
 
-        <img
-          src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800"
-          alt="Wellness care">
+        <a
+        href="https://wa.me/918893713227?text=I%20WANT%20ID%20HERE.."
+        class="whatsapp-btn"
+        target="_blank"
+        onclick="return gtag_report_conversion(this.href)"
+        rel="noopener noreferrer">
 
-        <div class="service-info">
-          <h3>Wellness Care</h3>
+            <svg viewBox="0 0 24 24">
+                <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.1-3.7-8.3ZM12.1 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.3-.4a9.7 9.7 0 0 1-1.5-5.2 9.9 9.9 0 1 1 9.9 9.8Zm5.4-7.4c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.3-1.5-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.6-1-2.1-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.5s1.1 2.8 1.3 3c.2.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.5Z"/>
+            </svg>
 
-          <p>
-            Discover a peaceful space dedicated to
-            comfort and relaxation.
-          </p>
+            BOOK NOW
+
+        </a>
+
+        <div class="bottom-text">
+            YOUR MOMENTS · OUR PASSION
         </div>
 
-      </div>
-
     </div>
 
-  </section>
+</section>
 
 
-  <!-- BOOKING SECTION -->
+<!-- FOOTER -->
 
-  <section class="booking">
+<footer class="footer" id="contact">
 
-    <div class="section-label">
-      LIMITED TIME SPECIAL OFFER
+    <div class="footer-logo">
+        AMBANI<span>.</span> STUDIO
     </div>
-
-    <h2>
-      Get <span class="discount">12% OFF</span>
-    </h2>
 
     <p>
-      Enjoy a special discount on your first booking.
-      <br>
-      Contact us on WhatsApp and make your booking today.
+        PREMIUM PHOTOGRAPHY & CREATIVE STUDIO
     </p>
-
-    <a class="whatsapp-btn"
-       href="https://wa.me/918893713227?text=I%20WANT%20TO%20KNOW%20MORE.."
-       target="_blank"
-       rel="noopener" onclick="return gtag_report_conversion(this.href)">
-
-      BOOK YOUR FIRST SESSION
-
-    </a>
-
-  </section>
-
-
-  <!-- CONTACT SECTION -->
-
-  <section class="contact" id="contact">
-
-    <div class="section-label">
-      GET IN TOUCH
-    </div>
-
-    <h2>
-      Contact Us
-    </h2>
 
     <p>
-      Have questions or want to make a booking?
-      Chat with us today.
+        © 2026 AMBANI STUDIO. ALL RIGHTS RESERVED.
     </p>
 
-    <div class="phone">
-      <a href="tel:+918893713227">
-        +91 88937 13227
-      </a>
-    </div>
-
-    <a class="whatsapp-btn"
-       href="https://wa.me/918893713227?text=I%20WANT%20ID%20HERE.."
-       target="_blank"
-       rel="noopener" onclick="return gtag_report_conversion(this.href)">
-
-      CHAT WITH US ON WHATSAPP
-
-    </a>
-
-  </section>
+</footer>
 
 
-  <!-- FOOTER -->
+<!-- FLOATING WHATSAPP BUTTON -->
 
-  <footer>
+<a
+href="https://wa.me/918893713227?text=I%20WANT%20ID%20HERE.."
+class="float-whatsapp"
+target="_blank"
+onclick="return gtag_report_conversion(this.href)"
+rel="noopener noreferrer">
 
-    © 2026 Goa Spa Center. All Rights Reserved.
+    ☎ BOOK NOW
 
-  </footer>
-
-
-  <!-- FLOATING WHATSAPP BUTTON -->
-
-  <a class="floating-wa"
-     href="https://wa.me/918893713227?text=I%20WANT%20TO%20KNOW%20MORE.."
-     target="_blank"
-     rel="noopener"
-     aria-label="Chat with us on WhatsApp" onclick="return gtag_report_conversion(this.href)">
-
-    <svg viewBox="0 0 32 32">
-      <path d="M16 .5A15.5 15.5 0 0 0 2.6 23.8L.5 31.5l7.9-2.1A15.5 15.5 0 1 0 16 .5zm0 28.2c-2.5 0-4.9-.7-7-2l-.5-.3-4.7 1.2L5 23l-.3-.5A12.7 12.7 0 1 1 16 28.7zm7-9.5c-.4-.2-2.3-1.1-2.7-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7s-.9-2.1-1.3-2.9c-.3-.7-.7-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 3.9c.2.3 2.8 4.3 6.8 6 .9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.7-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5z"/>
-    </svg>
-
-  </a>
+</a>
 
 </body>
 </html>
